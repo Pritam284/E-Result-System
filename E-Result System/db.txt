@@ -1,0 +1,78 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.4
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jan 18, 2014 at 02:18 PM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `eresult`
+--
+CREATE DATABASE `eresult` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `eresult`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `userId` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `status` varchar(20) NOT NULL,
+  PRIMARY KEY  (`userId`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`userId`, `password`, `status`) VALUES
+('Faiazahsan', 'faiaz2009', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student`
+--
+
+CREATE TABLE IF NOT EXISTS `student` (
+  `id` varchar(9) NOT NULL,
+  `department` varchar(20) NOT NULL,
+  `firstName` varchar(20) NOT NULL,
+  `lastName` varchar(20) NOT NULL,
+  `year` varchar(20) NOT NULL,
+  `semester` varchar(20) NOT NULL,
+  `cgpa` varchar(20) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teacher`
+--
+
+CREATE TABLE IF NOT EXISTS `teacher` (
+  `id` varchar(5) NOT NULL,
+  `firstName` varchar(20) NOT NULL,
+  `lastName` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
+  `designation` varchar(20) NOT NULL,
+  `mobileNo` varchar(20) NOT NULL,
+  `roomNo` varchar(20) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `teacher`
+--
